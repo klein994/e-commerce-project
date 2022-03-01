@@ -1,8 +1,8 @@
 import React from 'react';
-import CartWidget from "../CartWidget/CartWidget";
-import HomeWidget from "../HomeWidget/HomeWidget";
-import LogInWidget from "../LoginWidget/LogInWidget";
-import CategoriesMenu from "../CategoriesMenu/CategoriesMenu";
+import CartWidget from "./CartWidget/CartWidget";
+import HomeWidget from "./HomeWidget/HomeWidget";
+import LogInWidget from "./LoginWidget/LogInWidget";
+import CategoriesMenu from "./CategoriesMenu/CategoriesMenu";
 import {IoMenu} from "react-icons/io5";
 
 const NavBar = () => {
