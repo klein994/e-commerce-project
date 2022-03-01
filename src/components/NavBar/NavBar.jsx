@@ -8,7 +8,7 @@ import {IoMenu} from "react-icons/io5";
 const NavBar = () => {
     return (
         <div className="shadow-xl">
-            <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
+            <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 opacity-80 dark:bg-gray-800 ">
                 <div className="container flex  flex-wrap md:flex-nowrap justify-between items-center mx-auto">
                     <a href="#" className="flex items-center">
                         {/*<img src="/docs/images/logo.svg" className="mr-3 h-6 sm:h-10" alt="Flowbite Logo"/>*/}
