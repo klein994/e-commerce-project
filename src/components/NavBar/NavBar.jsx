@@ -19,10 +19,10 @@ const NavBar = () => {
                               <CategoriesMenu/>
                             </li>
                             <li>
-                                <LogInWidget/>
+                                <HomeWidget/>
                             </li>
                             <li>
-                                <HomeWidget/>
+                                <LogInWidget/>
                             </li>
                             <li>
                                 <CartWidget/>
