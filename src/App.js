@@ -3,10 +3,10 @@ import NavBar from "./components/NavBar/NavBar";
 
 
 
-const ItemListContainer = () => {
+const ItemListContainer = ({Greeting}) => {
     return (
         <div>
-            <h3>Las ofertas de la semana</h3>
+            <h3>{Greeting}</h3>
         </div>
     );
 };
@@ -18,7 +18,7 @@ function App() {
     return (
         <div className="App">
             <NavBar/>
-            <ItemListContainer/>
+            <ItemListContainer Greeting={'Hola este es un ItemListContainer'}/>
 
         </div>
     );
