@@ -11,10 +11,12 @@ const NavBar = () => {
         <div className="shadow-xl">
             <nav className="bg-white  border-gray-200 px-2 sm:px-4 py-2.5  dark:bg-gray-800 ">
                 <div className="container flex  flex-wrap md:flex-nowrap justify-between items-center mx-auto">
+                    <div className='w-1/2 md:max-w-xs '>
                     <a href="#" className="flex items-center">
-                        <img src={LOGO} className="mr-3 h-auto max-w-xs sm:h-10" alt="Logo"/>
+                        <img src={LOGO} className="mr-3 h-auto     " alt="Logo"/>
 
                     </a>
+                    </div>
                     <div className="flex md:order-2">
 
                         <button data-collapse-toggle="mobile-menu-4" type="button"
