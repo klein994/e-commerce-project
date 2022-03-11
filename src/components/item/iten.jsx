@@ -2,16 +2,16 @@ import React from 'react';
 import {IoStar} from "react-icons/io5";
 import ItemCount from "../itemCount/itemCount";
 
-const Item = ({id,tittle,description,price,currency,picture,stock}) => {
+const Item = ({products}) => {
     return (
         <div >
             <div className=" max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 hover:shadow-xl">
                 <a href="#">
-                    <img className="p-8 rounded-t-lg" src={picture} alt="product image"/>
+                    <img className="p-8 rounded-t-lg" src={products.picture.ImageDefault} alt="product image"/>
                 </a>
                 <div className="px-5 pb-5">
                     <a href="#">
-                        <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{tittle}</h5>
+                        <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{products.tittle}</h5>
                     </a>
                     <div className="flex items-center mt-2.5 mb-5">
                         <IoStar/>
@@ -25,11 +25,11 @@ const Item = ({id,tittle,description,price,currency,picture,stock}) => {
 
                     <div className="flex justify-between items-center">
                         <div className="flex text-left flex-col mb-0">
-                            <span className="text-md font-bold text-gray-400  dark:text-white">Stock {stock} uds.</span>
-                            <span className="text-2xl  font-bold text-gray-900 dark:text-white"><span className="text-sm font-bold text-gray-900  dark:text-white">{currency}$</span>{price}</span>
+                            <span className="text-md font-bold text-gray-400  dark:text-white">Stock {products.stock} uds.</span>
+                            <span className="text-2xl  font-bold text-gray-900 dark:text-white"><span className="text-sm font-bold text-gray-900  dark:text-white">{products.currency}$</span>{products.price}</span>
 
                         </div>
-                        <ItemCount stock={stock} initial='0' idProduct={id} />
+                        <ItemCount stock={products.stock} initial='0' idProduct={products.id} />
                     </div>
 
                 </div>

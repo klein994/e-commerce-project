@@ -23,7 +23,7 @@ const ItemList = () => {
             { loading ? <Loading/> :
                 prods.map((prod)=>
                     <div key={prod.id} >
-                        <Item id={prod.id} tittle={prod.tittle} description={prod.description} price={prod.price} currency={prod.currency} picture={prod.picture.ImageDefault} stock={prod.stock}/>
+                        <Item products={prod}/>
                         {/*{console.log(prod.picture)}*/}
                     </div>
 
