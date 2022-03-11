@@ -9,7 +9,7 @@ import {IoMenu} from "react-icons/io5";
 const NavBar = () => {
     return (
         <div className=" relative">
-            <nav className="bg-white bg-opacity-90  shadow-xl fixed top-0 left-0 right-0 w-auto border-gray-200 px-2 sm:px-4 py-2.5  dark:bg-gray-800 ">
+            <nav className="bg-white bg-opacity-90  shadow-xl top-0 left-0 right-0 w-auto border-gray-200 px-2 sm:px-4 py-2.5  dark:bg-gray-800 ">
                 <div className="container flex  flex-wrap md:flex-nowrap justify-between items-center mx-auto">
                     <div className='w-1/2 md:max-w-xs '>
                     <a href="#" className="flex items-center">
