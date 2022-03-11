@@ -16,7 +16,7 @@ const products = [{
     price: 2200,
     currency: 'Ars',
     picture: {ImageDefault},
-    stock:5
+    stock:0
 }
     , {
         id: 3,
