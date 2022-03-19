@@ -5,6 +5,7 @@ import HomeWidget from "./HomeWidget/HomeWidget";
 import LogInWidget from "./LoginWidget/LogInWidget";
 import CategoriesMenu from "./CategoriesMenu/CategoriesMenu";
 import {IoMenu} from "react-icons/io5";
+import {NavLink} from "react-router-dom";
 
 const NavBar = () => {
     return (
@@ -12,10 +13,10 @@ const NavBar = () => {
             <nav className="bg-white bg-opacity-90  shadow-xl top-0 left-0 right-0 w-auto border-gray-200 px-2 sm:px-4 py-2.5  dark:bg-gray-800 ">
                 <div className="container flex  flex-wrap md:flex-nowrap justify-between items-center mx-auto">
                     <div className='w-1/2 md:max-w-xs '>
-                    <a href="#" className="flex items-center">
+                    <NavLink to='/' className="flex items-center">
                         <img src={LOGO} className="mr-3 h-auto     " alt="Logo"/>
 
-                    </a>
+                    </NavLink>
                     </div>
                     <div className="flex md:order-2">
 

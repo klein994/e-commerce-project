@@ -1,5 +1,6 @@
 import React from 'react';
 import {IoChevronDownOutline} from "react-icons/io5";
+import {NavLink} from "react-router-dom";
 
 const CategoriesMenu = () => {
     return (
@@ -13,21 +14,18 @@ const CategoriesMenu = () => {
                  className="hidden z-10 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
                 <ul className="py-1" aria-labelledby="dropdownLargeButton">
                     <li>
-                        <a href="#"
-                           className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Electrodomésticos</a>
+                        <NavLink to='category/Accessories'
+                           className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Accessories</NavLink>
                     </li>
                     <li>
-                        <a href="#"
-                           className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Gourmet</a>
+                        <NavLink to="category/SmartWatch"
+                           className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Smart Watch</NavLink>
                     </li>
-                    <li>
-                        <a href="#"
-                           className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Vinos</a>
-                    </li>
+
                 </ul>
                 <div className="py-1">
-                    <a href="#"
-                       className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Todas</a>
+                    <NavLink to="/"
+                       className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Todas</NavLink>
                 </div>
             </div>
         </>
