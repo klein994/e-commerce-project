@@ -8,7 +8,7 @@ const Item = ({products}) => {
 
     return (
         <div >
-            <div className=" max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 hover:shadow-2xl">
+            <div className=" max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:hover:bg-gray-600 dark:border-gray-700 hover:shadow-2xl">
                 <NavLink to={`detail/${products.id}`}  >
                     <img className="p-8 rounded-t-lg h-56 m-auto"  src={products.picture} alt="product image"/>
                 </NavLink>

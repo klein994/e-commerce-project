@@ -32,9 +32,9 @@ const ItemDetail = ({item}) => {
             <div
                 className="p-4 max-w-full h-full bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-100 dark:border-gray-100">
                 <h1 className='text-3xl text-left m-5'>{item.tittle}</h1>
-                <div className="grid grid-cols-3  gap-8 justify-center">
-                    <div className="shadow-md p-10"><img className='h-56 m-auto' src={item.picture} alt=""/></div>
-                    <div className=" p-10">
+                <div className="grid md:grid-cols-2  items-center gap-5 justify-center lg:grid-cols-3">
+                    <div className="shadow-md p-2 h-min  "><img className='max-h-56 items-center w-auto m-auto' src={item.picture} alt=""/></div>
+                    <div className=" p-2 lg:col-span-2 ">
                         <div className="flex items-baseline text-gray-900 dark:text-black">
                             <span className="text-3xl font-semibold">$</span>
                             <span className="text-4xl font-extrabold tracking-tight">{formatNumber(item.price)}</span>
@@ -59,16 +59,16 @@ const ItemDetail = ({item}) => {
                         <div className=" ">
 
                             {isCant ?
-                                <div className="flex justify-between">
+                                <div className="flex md:justify-start sm:justify-between ">
 
-                                    <Link to='/'>
+                                    <Link className='m-1' to='/'>
                                         <button
 
                                             className='block m-auto w-full flex items-center   text-xs justify-between py-2.5 px-5   font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 '>Añadir más Productos  &nbsp; <FaShoppingBasket/>
                                         </button>
 
                                     </Link>
-                                    <Link to='/cart'>
+                                    <Link className='m-1' to='/cart'>
                                         <button
 
                                             className='block m-auto w-full flex items-center   text-xs justify-between py-2.5 px-5   font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 '>Ir al Carrito  &nbsp; <FaShoppingBag/>

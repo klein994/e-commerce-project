@@ -10,25 +10,11 @@ function Cart() {
         maximumFractionDigits: 2
     }).format(number)
 
-    const {cartList, vaciarCarrito,deleteItem} = useCartContext()
+    const {cartList, vaciarCarrito,deleteItem,eliminarObjetosDuplicados} = useCartContext()
 
 
-    function eliminarObjetosDuplicados(arr, prop) {
-        var nuevoArray = [];
-        var lookup  = {};
 
-        for (var i in arr) {
-            lookup[arr[i][prop]] = arr[i];
-        }
-
-        for (i in lookup) {
-            nuevoArray.push(lookup[i]);
-        }
-
-        return nuevoArray;
-    }
-
-    var duplicadosEliminados = eliminarObjetosDuplicados(cartList, 'id');
+    let duplicadosEliminados = eliminarObjetosDuplicados(cartList, 'id');
 
 
 
