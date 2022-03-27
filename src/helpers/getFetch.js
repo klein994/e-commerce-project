@@ -42,10 +42,10 @@ const products = [{
 
     }]
 
-export const getFetch = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve(products)
-    }, 2000)
+// export const getFetch = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve(products)
+//     }, 2000)
 
 
-})
+// })

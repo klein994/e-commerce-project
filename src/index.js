@@ -4,7 +4,8 @@ import './index.css';
 import 'flowbite';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { getFirestoreApp } from './firebase/config'
+getFirestoreApp()
 ReactDOM.render(
   <React.StrictMode>
     <App />

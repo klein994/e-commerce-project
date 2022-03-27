@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 import {FaMinusCircle, FaPlusCircle, FaShoppingBag} from "react-icons/fa";
 
-const ItemCount = ({stock, initial, onAdd, idProduct}) => {
 
-    const [count, setCount] = useState(1);
 
+const CountCart = ({stock, initial, onAdd, idProduct}) => {
+
+    const [count, setCount] = useState(initial);
     const addOne = () => {
         if (count < stock) {
             setCount(count + 1)
@@ -12,17 +13,12 @@ const ItemCount = ({stock, initial, onAdd, idProduct}) => {
     };
     // handleDecrease
     const removeOne = () => {
-        if (count > initial) {
+        if (count >1) {
             setCount(count - 1)
         }
     };
-    const addToCart = () => {
-        onAdd( count )
-    };
-
-
     return (
-        <div className="grid grid-cols-3 gap-0 items-center w-44">
+        <div className="grid grid-cols-3 m-auto gap-0 items-center w-44">
 
 
             <div className="...">{(stock < 1) ? '' :
@@ -43,22 +39,11 @@ const ItemCount = ({stock, initial, onAdd, idProduct}) => {
                 </button>
             }
             </div>
-            <div className="col-span-3 ...">  {(stock < 1) ?
-                <button
-                    className='block m-auto flex items-center  text-xs justify-between py-2.5 px-5   font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 '> sin
-                    stock&nbsp; <FaShoppingBag/>
-                </button>
-                :
-                <button
-                    onClick={addToCart}
-                    className='block m-auto w-full flex items-center   text-xs justify-between py-2.5 px-5   font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 '> Añadir
-                    al carrito &nbsp; <FaShoppingBag/>
-                </button>}
-            </div>
+
 
 
         </div>
     );
 };
 
-export default ItemCount;
+export default CountCart;
