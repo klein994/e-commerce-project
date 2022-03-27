@@ -1,4 +1,4 @@
-import {React} from 'react';
+import {React, useEffect, useState} from 'react';
 import {useCartContext} from "../../context/CartContext";
 import CountCart from "../countCart/countCart";
 import ItemCount from "../itemCount/itemCount";
@@ -9,7 +9,26 @@ function Cart() {
         minimumFractionDigits: 2,
         maximumFractionDigits: 2
     }).format(number)
+
     const {cartList, vaciarCarrito,deleteItem} = useCartContext()
+
+
+    function eliminarObjetosDuplicados(arr, prop) {
+        var nuevoArray = [];
+        var lookup  = {};
+
+        for (var i in arr) {
+            lookup[arr[i][prop]] = arr[i];
+        }
+
+        for (i in lookup) {
+            nuevoArray.push(lookup[i]);
+        }
+
+        return nuevoArray;
+    }
+
+    var duplicadosEliminados = eliminarObjetosDuplicados(cartList, 'id');
 
 
 
@@ -44,13 +63,13 @@ function Cart() {
                     </thead>
                     <tbody>
 
-                    {cartList.map(prod =><tr key={prod.id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                    {duplicadosEliminados.map(prod =><tr key={prod.id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <td className="px-4 py-4 text-2xl ">
                                 <button
                                     onClick={() => deleteItem(prod.id)}
                                     className=''><IoTrashOutline/>
                                 </button>
-                                {/*<  id={prod.id}/>*/}
+
 
                             </td>
                         <td scope="row "
