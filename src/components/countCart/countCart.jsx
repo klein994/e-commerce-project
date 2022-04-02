@@ -1,20 +1,25 @@
 import React, {useState} from 'react';
 import {FaMinusCircle, FaPlusCircle, FaShoppingBag} from "react-icons/fa";
 
-
+import {useCartContext} from "../../context/CartContext";
 
 const CountCart = ({stock, initial, onAdd, idProduct}) => {
-
+    const {addToCart} = useCartContext()
     const [count, setCount] = useState(initial);
-    const addOne = () => {
+    const addOne = (idProduct) => {
         if (count < stock) {
             setCount(count + 1)
+
+
         }
+
     };
     // handleDecrease
     const removeOne = () => {
         if (count >1) {
             setCount(count - 1)
+
+
         }
     };
     return (
@@ -30,7 +35,7 @@ const CountCart = ({stock, initial, onAdd, idProduct}) => {
             </div>
             <div className="...">
                 {(stock < 1) ? '' :
-                    <h2 className='p-4 text-sm m-auto font-semibold  text-gray-900 dark:text-white'>{count}</h2>}
+                    <h2 className='p-4 text-sm m-auto font-semibold  text-gray-900 '>{count}</h2>}
             </div>
             <div className="...">{(stock < 1) ? '' :
                 <button

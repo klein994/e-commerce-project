@@ -8,20 +8,27 @@ const CartContextProvider = ({children}) => {
     const [cartList, setcartList] = useState([])
 
     const addToCart = (item) => {
+        const index = cartList.findIndex(i => i.id === item.id)//pos    -1
+        if (index > -1) {
+            const aQty = cartList[index].cantidad
 
-        setcartList([...cartList, item])
-
+            cartList.splice(index, 1)
+            setcartList([...cartList, { ...item, cantidad: item.cantidad + aQty}])
+        } else {
+            setcartList([...cartList, {...item, cantidad: item.cantidad}])
+        }
     }
-    const  eliminarObjetosDuplicados = (arr, prop) => {
-        var nuevoArray = [];
-        var lookup  = {};
-        for (var i in arr) {
-            lookup[arr[i][prop]] = arr[i];
-        }
-        for (i in lookup) {
-            nuevoArray.push(lookup[i]);
-        }
-        return nuevoArray;
+
+    const formatNumber = (number) => new Intl.NumberFormat('es-AR', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    }).format(number)
+
+    const precioTotal=() =>{
+        return cartList.reduce((count,prod)=> count + (prod.cantidad * prod.price),0)
+    }
+    const cantidadProductos=() =>{
+        return cartList.reduce((count,prod)=> count += prod.cantidad ,0)
     }
 
     const vaciarCarrito = () => {
@@ -38,7 +45,9 @@ const CartContextProvider = ({children}) => {
             addToCart,
             vaciarCarrito,
             deleteItem,
-            eliminarObjetosDuplicados
+            precioTotal,
+            cantidadProductos,
+            formatNumber
         }}>
             {children}
         </CartContext.Provider>

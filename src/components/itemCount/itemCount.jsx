@@ -34,7 +34,7 @@ const ItemCount = ({stock, initial, onAdd, idProduct}) => {
             </div>
             <div className="...">
                 {(stock < 1) ? '' :
-                    <h2 className='p-4 text-sm m-auto font-semibold  text-gray-900 dark:text-black'>{count}</h2>}
+                    <h2 className='p-4 text-sm m-auto font-semibold  text-gray-900 '>{count}</h2>}
             </div>
             <div className="...">{(stock < 1) ? '' :
                 <button

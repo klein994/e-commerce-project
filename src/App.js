@@ -13,7 +13,7 @@ import ItemListContainer from "./container/ItemListContainer/ItemListContainer";
 function App() {
     return (
         <BrowserRouter>
-            <div className="App dark:bg-gray-700 h-screen">
+            <div className="App h-screen">
              <CartContextProvider>
                     <NavBar/>
                     <Routes>

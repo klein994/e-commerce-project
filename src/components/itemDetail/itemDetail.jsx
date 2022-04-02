@@ -30,27 +30,27 @@ const ItemDetail = ({item}) => {
     return (
         <div>
             <div
-                className="p-4 max-w-full h-full bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-100 dark:border-gray-100">
+                className="p-4 max-w-full h-full bg-white rounded-lg border shadow-md sm:p-8 ">
                 <h1 className='text-3xl text-left m-5'>{item.tittle}</h1>
                 <div className="grid md:grid-cols-2  items-center gap-5 justify-center lg:grid-cols-3">
                     <div className="shadow-md p-2 h-min  "><img className='max-h-56 items-center w-auto m-auto' src={item.picture} alt=""/></div>
                     <div className=" p-2 lg:col-span-2 ">
-                        <div className="flex items-baseline text-gray-900 dark:text-black">
+                        <div className="flex items-baseline text-gray-900 ">
                             <span className="text-3xl font-semibold">$</span>
                             <span className="text-4xl font-extrabold tracking-tight">{formatNumber(item.price)}</span>
                             <span
-                                className="ml-1 text-xl font-normal text-gray-500 dark:text-gray-600">{item.currency}</span>
+                                className="ml-1 text-xl font-normal text-gray-500 ">{item.currency}</span>
                         </div>
                         <ul role="list" className="my-7 space-y-5">
                             <li className="flex space-x-3">
                                 <IoCheckmarkCircle className='text-xl text-blue-600'/>
                                 <span
-                                    className="text-base font-normal leading-tight text-gray-500 dark:text-gray-600">{item.description}</span>
+                                    className="text-base font-normal leading-tight text-gray-500 ">{item.description}</span>
                             </li>
                             <li className="flex space-x-3">
                                 <IoCheckmarkCircle className='text-xl text-blue-600'/>
                                 <span
-                                    className="text-base font-normal leading-tight text-gray-500 dark:text-gray-600">En Stock {item.stock} Uds.</span>
+                                    className="text-base font-normal leading-tight text-gray-500 ">En Stock {item.stock} Uds.</span>
                             </li>
 
 
