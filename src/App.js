@@ -17,7 +17,7 @@ function App() {
              <CartContextProvider>
                     <NavBar/>
                     <Routes>
-                        <Route path='/' element={<ItemListContainer Greeting='Ecommerce'/>}/>
+                        <Route path='/' element={<ItemListContainer Greeting='Todos los Productos'/>}/>
                         <Route path='/category/:id' element={<ItemListContainer/>}/>
                         <Route path='/detail/:id' element={<ItemDetailContainer/>}/>
                         <Route path='/*' element={<Navigate to='/'/>}/>

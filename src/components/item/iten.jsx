@@ -28,8 +28,10 @@ const Item = ({products}) => {
                     <NavLink to={`detail/${products.id}`}  >
                     <div className="flex justify-between items-center">
                         <div className="flex text-left flex-col mb-0">
-                            <span className="text-md font-bold text-gray-400  ">{products.category}</span>
+                            <span className="text-md font-bold text-gray-400  "><NavLink to={`category/${products.category}`}>{products.category}</NavLink></span>
+
                         </div>
+
                         <span className="text-2xl  font-bold text-gray-900 "><span className="text-sm font-bold text-gray-900  ">{products.currency}$</span>  {formatNumber(products.price)}</span>
                     </div>
                     </NavLink>

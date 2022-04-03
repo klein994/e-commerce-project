@@ -9,7 +9,7 @@ import {NavLink} from "react-router-dom";
 
 const NavBar = () => {
     return (
-        <div className=" relative">
+        <div className="fixed w-full top-0 z-10">
             <nav className="bg-white bg-opacity-90  shadow-xl top-0 left-0 right-0 w-auto border-gray-200 px-2 sm:px-4 py-2.5 ">
                 <div className="container flex  flex-wrap md:flex-nowrap justify-between items-center mx-auto">
                     <div className='w-1/2 md:max-w-xs '>

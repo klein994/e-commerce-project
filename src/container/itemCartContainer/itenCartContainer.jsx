@@ -6,7 +6,7 @@ import Cart from "../../components/cart/cart";
 const ItenCartContainer = () => {
     return (
         <div>
-            <div className="md:container md:mx-auto m-20">
+            <div className="md:container md:m-auto  mt-28">
               <Cart/>
             </div>
         </div>

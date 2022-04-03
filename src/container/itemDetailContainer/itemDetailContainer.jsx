@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
 
 
     return (
-        <div className="md:container md:mx-auto mt-20">
+        <div className="md:container md:mx-auto mt-28">
             {loading ? <Loading/> :
 
                     <div key={prods.id}>
