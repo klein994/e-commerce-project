@@ -6,20 +6,20 @@ import {useCartContext} from "../../context/CartContext";
 const CountCart = ({stock, initial, onAdd, idProduct}) => {
     const {addToCart} = useCartContext()
     const [count, setCount] = useState(initial);
-    const addOne = (idProduct) => {
+
+    const addOne = () => {
         if (count < stock) {
             setCount(count + 1)
-
+                addToCart( { ...idProduct, cantidad: 1 } )
 
         }
 
     };
-    // handleDecrease
+
     const removeOne = () => {
         if (count >1) {
             setCount(count - 1)
-
-
+            addToCart( { ...idProduct, cantidad: -1 } )
         }
     };
     return (

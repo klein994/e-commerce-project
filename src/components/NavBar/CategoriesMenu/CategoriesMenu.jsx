@@ -14,11 +14,11 @@ const CategoriesMenu = () => {
                  className="hidden z-10 w-44 text-base list-none bg-white rounded divide-y divide-gray-100 shadow ">
                 <ul className="py-1" aria-labelledby="dropdownLargeButton">
                     <li>
-                        <NavLink to='category/Accessories'
+                        <NavLink to='/category/Accessories'
                            className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Accessories</NavLink>
                     </li>
                     <li>
-                        <NavLink to="category/SmartWatch"
+                        <NavLink to="/category/SmartWatch"
                            className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Smart Watch</NavLink>
                     </li>
 
