@@ -12,4 +12,10 @@ Al correlo te llevará en tu explorador predeterminado.\
 [http://localhost:3000](http://localhost:3000)
 
 ## Algunas capturas
-![Home](Image location)
+
+![Home](https://raw.githubusercontent.com/klein994/e-commerce-project/master/public/images/home.JPG)
+![Home](https://raw.githubusercontent.com/klein994/e-commerce-project/master/public/images/Categorias.JPG)
+![Home](https://raw.githubusercontent.com/klein994/e-commerce-project/master/public/images/MenuCarrito.JPG)
+![Home](https://raw.githubusercontent.com/klein994/e-commerce-project/master/public/images/detail.JPG)
+![Home](https://raw.githubusercontent.com/klein994/e-commerce-project/master/public/images/Carrito.JPG)
+![Home](https://raw.githubusercontent.com/klein994/e-commerce-project/master/public/images/generarOrden.JPG)
