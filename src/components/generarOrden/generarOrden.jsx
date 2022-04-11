@@ -81,7 +81,7 @@ const GenerarOrden = () => {
         } else if (!regex.test(values.validarEmail)) {
             errors.validarEmail = "Formato Email invalido";
         } else if (values.validarEmail !== values.email) {
-            errors.validarEmail = "El Email debe ser coinsidir";
+            errors.validarEmail = "El Email debe ser coincidir";
         }
 
         if (!values.name) {
