@@ -15,11 +15,9 @@ const NavBar = () => {
                     <div className='w-1/2 md:max-w-xs '>
                     <NavLink to='/' className="flex items-center">
                         <img src={LOGO} className="mr-3 h-auto     " alt="Logo"/>
-
                     </NavLink>
                     </div>
                     <div className="flex md:order-2">
-
                         <button data-collapse-toggle="mobile-menu-4" type="button"
                                 className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
                                 aria-controls="mobile-menu-4" aria-expanded="false">

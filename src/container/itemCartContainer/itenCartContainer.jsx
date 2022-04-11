@@ -1,6 +1,4 @@
 import React from 'react';
-import Loading from "../../components/loading/loading";
-import ItemDetail from "../../components/itemDetail/itemDetail";
 import Cart from "../../components/cart/cart";
 
 const ItenCartContainer = () => {

@@ -1,19 +1,14 @@
 import React, {useEffect, useState} from 'react';
-
 import {getFetch} from "../../helpers/getFetch";
-
 
 const PromiseProducts = () => {
 
- // const [bool,setBool] =  useState(true)
     const [prods, setprods] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() =>{
     getFetch
         .then((response) => {
-            // throw new Error('Este es un error de código')
             setprods(response)
-            // return response// Esto lo uso si necesito pasar a otro then la respuesta para manipularla (parsear) ejm pasar de json a objeto
         })
         .catch((error) => console.log(error))
     .finally(() =>  setLoading(false))
@@ -21,9 +16,6 @@ const PromiseProducts = () => {
 console.log(prods)
     return (
         <div>
-            {/*{console.log(task)}*/}
-            {/*<button onClick={()=> setBool(!bool)}> click </button>*/}
-            {/*{[1,2,3].map((numeros,index)=><li key={index}>{numeros}</li>)}*/}
             { loading ? <svg role="status"
                              className="inline mr-2 w-10 h-10 text-gray-200 animate-spin "
                              viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +28,6 @@ console.log(prods)
                 </svg> :
                 prods.map((prod)=>
                 <li key={prod.id}>{prod.tittle}</li>
-
             )}
         </div>
     );

@@ -1,11 +1,9 @@
 import React from 'react';
 import {IoStar} from "react-icons/io5";
-import ItemCount from "../itemCount/itemCount";
 import {NavLink} from "react-router-dom";
 
 const Item = ({products}) => {
     const formatNumber = (number) => new Intl.NumberFormat('es-AR', { minimumFractionDigits: 2, maximumFractionDigits: 2}).format(number)
-
     return (
         <div >
             <div className=" max-w-sm bg-white rounded-lg shadow-md  hover:shadow-2xl">
